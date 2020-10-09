@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Serif", sans-serif;
+}
+
+input,
+textarea,
+button {
+  font-family: "Noto Serif", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 2rem;
+}
+
+p {
+  margin-bottom: 0.8rem; /* Platz zwischen Paragraphen! */
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+  color: coral; /* globale Einstellung um links verschwinden zu lassen */
+}
+
+.container {
+  max-width: 1200px;
+  padding: 3rem;
+  min-height: 25vh;
+  margin: 0 auto;
+}
+
+/* Header area */
+
+header {
+  background-color: #333333;
+  position: fixed;
+  padding: 1.5rem;
+  height: 90px;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Formatting of the Logo */
+
+header #logo a {
+  color: #86d6fe;
+  font-size: 2rem;
+}
+
+/* Main navigation area formatting */
+
+header nav ul {
+  list-style-type: none; /* lässt bulletpoints in Listen verschwinden!*/
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  color: white;
+  padding: 0.5rem 0;
+  margin: 0 1rem;
+  display: block;
+  border-bottom: 3px dotted transparent; /* die Navigation springt nicht mehr beim hovern!*/
+}
+
+header nav ul li a:hover {
+  background-color: #4278ff;
+  border-bottom: 3px dotted #4278ff; /* erstellt eine Linie unter der Navigation wenn man hovert */
+}
+
+/* Hero-Banner formatting */
+
+main #hero-banner {
+  background: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80")
+    no-repeat fixed center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main #hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-image: linear-gradient(90deg, #1f266b, #f3f1f1);
+  opacity: 0.7;
+  mix-blend-mode: hard-light;
+  z-index: 1;
+}
+
+main #hero-banner h1 {
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+  font-family: "Ubuntu Mono", monospace;
+  z-index: 2;
+}
+
+main #hero-banner span {
+  color: #ff8c00;
+}
+
+/* Past/Work Section formatting */
+
+main #past {
+  background-color: #f4f4f4;
+}
+
+main #past .workBoxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+main #past .box {
+  background-color: white; /* box formatting damit die Boxen auch gut aussehen!*/
+  width: 32%;
+  padding: 1rem;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #333333; /* muss min 4 Angaben haben!*/
+}
+
+main #past .box img {
+  width: 100%; /*Passt die Bilder der Boxen an! */
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+main #past .box:hover {
+  box-shadow: 0 0 25px #333333; /* Die Karte reagiert beim hovern!*/
+}
+
+main #past .box a:hover {
+  color: darkorange;
+  text-decoration: underline;
+}
+
+/* Present/Experience Section Formatting */
+
+main #present {
+  display: flex;
+  background-color: white;
+}
+
+main #present img {
+  width: 50%;
+  object-fit: cover; /* Bilder sehen nicht mehr gequetscht aus und passt sich der Menge des Textes an! */
+  object-position: center;
+}
+
+main #present .content {
+  padding: 3rem;
+}
+
+/* Skills Section Formatting */
+
+main #skills {
+  background: url("https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80")
+    no-repeat fixed center center/cover;
+  padding: 3rem;
+  width: 100%;
+}
+
+/* box formatting for Skills */
+
+i {
+  font-size: 120px;
+  color: black;
+}
+
+.skill_boxes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+main #skills .box {
+  background-color: white; /* box formatting damit die Boxen auch gut aussehen!*/
+  width: 32%;
+  padding: 1rem;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #333333; /* muss min 4 Angaben haben!*/
+}
+
+main #skills .box img {
+  width: 100%; /* Passt die Bilder der Boxen an! */
+  margin-bottom: 1rem;
+  padding: 5rem;
+}
+
+main #skills .box:hover {
+  box-shadow: 0 0 25px #333333; /* Die Karte reagiert beim hovern!*/
+}
+
+/* Skill Card Formatting */
+
+main #skills .container {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+main #skills .container li {
+  position: relative;
+  list-style: none;
+  margin: 50px 0;
+  font-weight: 500;
+  width: 80%;
+  text-transform: uppercase;
+}
+
+/* Skill Card Formatting + Animation*/
+main #skills .container li::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: rgba(54, 126, 223, 0.5);
+  border-radius: 1000px;
+}
+
+main #skills .container li::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 0;
+  height: 15px;
+  background-color: rgba(54, 126, 223, 1);
+  border-radius: 1000px;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+main #skills .container li.htmlBar::after {
+  animation-name: htmlBar;
+}
+
+@keyframes htmlBar {
+  to {
+    width: 40%;
+  }
+}
+
+main #skills .container li.cssBar::after {
+  animation-name: cssBar;
+}
+
+@keyframes cssBar {
+  to {
+    width: 30%;
+  }
+}
+
+main #skills .container li.jsBar::after {
+  animation-name: jsBar;
+}
+
+@keyframes jsBar {
+  to {
+    width: 40%;
+  }
+}
+
+/* Footer Section Formatting */
+
+footer {
+  background-color: #333333;
+  text-align: center;
+  color: white;
+  padding: 1.5rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+  margin-top: 3rem;
+}
+
+/* Form Design formatting */
+
+footer form {
+  width: 60%;
+  margin: 0;
+}
+
+footer form .form-group {
+  margin: 2rem 0; /* Abstand zur anderen Sektion schaffen */
+}
+
+footer form .form-group label {
+  width: 200px;
+  display: inline-block;
+  text-align: left;
+}
+
+footer form .form-group textarea {
+  min-height: 100px;
+}
+
+footer form .form-group input,
+footer form .form-group textarea {
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 60%;
+  font-size: 1rem;
+}
+
+footer form button {
+  background-color: coral; /* button Anpassung */
+  border-radius: 5px;
+  border: none;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: inherit;
+}
+
+/* Smaller Devices compatibility */
+
+/* Tablet */
+
+@media (max-width: 899px) {
+  main #present {
+    display: block;
+  }
+  main #present img {
+    width: 100%;
+  }
+  footer form {
+    width: 80%;
+    text-align: left;
+  }
+  footer form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  footer form .form-group input,
+  footer form .form-group textarea {
+    width: 100%;
+  }
+  footer form button {
+    width: 100%;
+  }
+}
+
+/* Hier Zuhause weitermachen !! */
+
+@media (max-width: 576px) {
+  header {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+  }
+  header nav ul li a {
+    padding: 0.5rem;
+  }
+  .container,
+  main #hero-banner h1 {
+    padding: 1rem;
+  }
+  main #past .past_boxes {
+    flex-direction: column;
+  }
+  main #past .box {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  main #future img {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+  main #past,
+  main #future {
+    padding: 0;
+  }
+}

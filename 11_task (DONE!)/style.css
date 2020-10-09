@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header formatting */
+
+header {
+  background-color: #333333;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+}
+
+/* Main area formatting */
+
+main {
+  margin-top: 50px;
+}
+
+footer {
+  background-color: #333333;
+}
+
+li {
+  display: inline-block;
+  padding: 1rem;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: orange;
+  text-decoration: underline;
+}
+
+p {
+  padding: 1rem;
+  color: grey;
+  background-color: lightblue;
+  margin: 1rem;
+}
+
+/*
+p:first-child {
+  color: black;
+  background-color: cyan;
+}
+
+p:last-child {
+  color: green;
+  background-color: pink;
+}
+*/
+
+/* Nur der Zweite Paragraph wird angesprochen 
+p:nth-child(2) {
+  color: green;
+  background-color: pink;
+}
+*/
+
+/*
+p:nth-child(even) {
+  color: green;
+  background-color: pink;
+}
+
+p:nth-child(odd) {
+  color: blue;
+  background-color: lightyellow;
+}
+*/
+
+/* Jeder 2 Eintrag wird eingefäbrt, angefangen beim vierten Eintrag!! */
+p:nth-child(2n + 4) {
+  color: green;
+  background-color: pink;
+}
+
+p:nth-child(4) {
+  color: yellow;
+  background-color: pink;
+  position: sticky;
+  top: 400px;
+}
+
+/* Hero Banner */
+
+section {
+  position: relative;
+  height: 90vh;
+  background: url(https://source.unsplash.com/weekly?water) no-repeat fixed
+    center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}

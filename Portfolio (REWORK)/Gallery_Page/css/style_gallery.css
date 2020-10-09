@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Serif", sans-serif;
+}
+/* Header area */
+
+header {
+  background-color: #333333;
+  position: fixed;
+  padding: 1.5rem;
+  height: 90px;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Formatting of the Logo */
+
+header #logo a {
+  color: #86d6fe;
+  font-size: 2rem;
+}
+
+/* Main navigation area formatting */
+
+header nav ul {
+  list-style-type: none; /* lässt bulletpoints in Listen verschwinden!*/
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  color: white;
+  padding: 0.5rem 0;
+  margin: 0 1rem;
+  display: block;
+  border-bottom: 3px dotted transparent; /* die Navigation springt nicht mehr beim hovern!*/
+}
+
+header nav ul li a:hover {
+  background-color: #4278ff;
+  border-bottom: 3px dotted #4278ff; /* erstellt eine Linie unter der Navigation wenn man hovert */
+}
+
+/* Gallery Grid formatting */
+
+.wrapper img {
+  width: 100%;
+  height: 300px;
+}
+
+.wrapper > div {
+  background-color: darkgray;
+  padding: 1rem;
+}
+
+.wrapper {
+  top: 10rem;
+  padding: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.wrapper > div:nth-child(odd) {
+  background-color: darkorange;
+}
+
+.pic1 {
+  grid-column: 1/3;
+}
+
+.pic3 {
+  grid-column: 2/4;
+}
+
+.pic4 {
+  grid-row: 2;
+}

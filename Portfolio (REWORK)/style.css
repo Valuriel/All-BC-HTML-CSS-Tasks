@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Serif", sans-serif;
+}
+
+h1,
+h2 {
+  margin-bottom: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  background-color: whitesmoke;
+  padding: 50px;
+  border-radius: 2px;
+  min-height: 25%;
+  margin: 0 auto;
+}
+
+/* header area formatting */
+
+header {
+  background-color: #333;
+  position: fixed;
+  padding: 1rem;
+  height: 90px;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header #logo a {
+  margin-top: 20px;
+  font-size: 32px;
+  float: left;
+  color: darkorange;
+  text-decoration: none;
+}
+
+/* Main navigation formatting */
+
+header nav ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+
+header nav ul li a:hover {
+  background-color: darkorange;
+}
+
+/* Hero Banner formatting */
+
+main #hero-banner {
+  background: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80")
+    no-repeat fixed center center/cover;
+  height: 85vh;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main #hero-banner h1 {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-family: sans-serif, monospace;
+  margin: 100px;
+}
+
+main #hero-banner span {
+  color: darkorange;
+}
+
+/* Section Past */
+
+.pastBoxes {
+  display: flex;
+  justify-content: space-around;
+}
+
+#past img {
+  width: 100%;
+}
+
+.box {
+  width: 30%;
+}
+
+.box a {
+  background-color: darkorange;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+/*Future formatting */
+
+main #future {
+  background-color: #f4f4f4;
+  padding: 50px;
+  width: 100%;
+}
+
+main #future img {
+  width: 300px;
+  float: left;
+  margin-right: 50px;
+  border-radius: 5px;
+}
+
+main #future p {
+  line-height: 2;
+}
+
+main #future {
+  background: url("https://source.unsplash.com/user/ruralexplorer") no-repeat
+    fixed center center/cover;
+  clear: both;
+}
+
+/* Present part formatting */
+
+main #present img {
+  width: 50%;
+  margin-right: 50px;
+  border-radius: 5px;
+}
+
+main #present .content {
+  padding: 50px;
+}
+
+main #present .content p {
+  line-height: 2;
+}
+
+/* Footer part formatting */
+
+footer {
+  background-color: #333;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* Media Queries */
+
+@media (min-width: 320px) {
+}
+
+/* Small devices (landscape phones 576px and up to next breakingpoint) */
+
+@media (min-width: 576px) {
+}
+
+/* Small devices (landscape phones 768px and up to next breakingpoint) */
+
+@media (min-width: 768px) {
+}
+
+/* Small devices (landscape phones 992px and up to next breakingpoint) */
+
+@media (min-width: 992px) {
+}
+
+/* Small devices (landscape phones 1200px and up to next breakingpoint) */
+
+@media (min-width: 1200px) {
+}

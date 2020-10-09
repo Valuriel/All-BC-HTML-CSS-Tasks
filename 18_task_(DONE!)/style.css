@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-color: purple;
+  --light-color: white;
+  --background-color: pink;
+  --text-color: coral;
+  --dark-text-color: black;
+  --font-family: sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-image: linear-gradient(#eabfcb, #a4508b);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-color); 
+}
+
+/* Header area */
+
+header {
+  background: var(--dark-color);
+  color: var(--light-color);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Formatting of the Logo */
+
+header #logo a {
+  font-size: 2rem;
+}
+
+header .icon {
+  display: none;
+}
+
+/* Main navigation area formatting */
+
+header nav ul {
+  position: relative;
+}
+
+/************Main Menu list items and links**************/
+
+header nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  padding: 1rem;
+  transition: all 0.4s;
+}
+
+header nav ul li ul li a:hover {
+  background-color: var(--text-color);
+}
+
+/******* Sub Menu *****/
+/* hidden by default ***/
+
+header nav ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 35px;
+  background: var(--dark-color);
+  transition: all 0.4s;
+}
+
+/* show sub menu when hovering over li */
+
+header nav ul li:hover ul,
+header nav ul li:focus-within > ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* sub menu list items */
+
+header nav ul li ul li {
+  display: block;
+}
+
+header nav ul li ul li a {
+  display: block;
+  padding: 1rem;
+}
+
+
+header nav ul li ul li a:hover {
+  background-color: var(--text-color);
+}
+
+/* Main area formatting */
+
+main {
+  margin-top: 300px;
+}
+
+section {
+  min-height: 25vh;
+}
+
+
+
+/***** Mobile Menu ****/
+
+@media (max-width: 576px) {
+  header .icon {
+    display: block;
+  }
+
+/* Hide all lists by default */
+
+header nav ul {
+    display: none;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    background-color: var(--dark-color);
+    width: 100%;
+  }
+
+/***** Show when JS is added via .mobilemenu class */
+
+header nav ul.mobilemenu {
+  display: block;
+}
+
+/**** Styling of the main and sub menu */
+
+  header nav ul li {
+    display: block;
+  }
+
+  header nav ul li a {
+    display: block;
+    padding: 1rem;
+  }
+
+  header nav ul li a:hover {
+    background-color: var(--dark-color);
+  }
+
+
+  header nav ul li ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    position: relative;
+    top: 0;
+    padding-left: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

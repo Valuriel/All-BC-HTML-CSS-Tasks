@@ -1,0 +1,70 @@
+body {
+    background-color: #dbd2e0;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  h1 {
+    color: #333333;
+  }
+
+  h1::after{
+      content: "Default site - desktop";
+  }
+
+  /***** Media queries formatting *****/
+
+  /* Large screens (large desktops, up to 1200px*/
+
+  @media (max-width: 1200px){
+      body {
+          background-color: #002400;
+      }
+      h1 {
+          color: white;
+      }
+
+      h1::after {
+          content: "extra large screen up to 1200px";
+      }
+  }
+
+  /***** large devices (desktops up to 992px) *****/
+
+  @media (max-width: 992px) {
+    body {
+      background-color: #273b09;
+    }
+    h1 {
+      color: white;
+    }
+    h1::after {
+      content: "large devices up to 992px";
+    }
+  }
+
+  /* Large devices (desktops, upt to 768px) */
+@media (max-width: 768px) {
+    body {
+      background-color: #58641d;
+    }
+    h1 {
+      color: white;
+    }
+    h1::after {
+      content: "tablets, up to 768px";
+    }
+  }
+  
+  /* Small devices (landscape phones, up to 576px) */
+  
+  @media (max-width: 576px) {
+    body {
+      background-color: #7b904b;
+    }
+    h1 {
+      color: white;
+    }
+    h1::after {
+      content: "mobiles, up to 576px";
+    }
+  }

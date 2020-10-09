@@ -1,0 +1,70 @@
+body {
+  background-color: salmon;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: blue;
+}
+
+h1::after {
+ content: "Default site - mobile phones 0px - 575px";
+}
+
+/* Media queries */
+/***** small devices (landscape phones from 576px up to next breakpoint) *****/
+
+@media (min-width: 576px) {
+  body {
+    background-color: blue;
+  }
+
+  h1 {
+    color: green;
+  }
+  h1::after {
+    content: "mobiles from 576px-767px";
+  }
+}
+
+/***** small devices (tablets from 768px and up to the next breakpoint) *****/
+
+@media (min-width: 768px) {
+  body {
+    background-color: yellow;
+  }
+  h1 {
+    color: purple;
+  }
+  h1::after{
+    content: "tablets 768px - 991px";
+  }
+}
+
+/****** large devices (desktops from 992px up to the next breakpoint) *****/
+@media (min-width: 992px) {
+  body {
+    background-color: red;
+  }
+
+  h1 {
+    color: yellow;
+  }
+  h1::after{
+    content: "large devices 992px - 1199px";
+  }
+}
+
+/***** extra large devices (large desktops from 1200 px and up) *****/
+@media (min-width: 1200px) {
+  body {
+    background-color: #002400;
+  }
+  h1 {
+    color: white;
+  }
+
+  h1::after {
+    content: "extra large screen 1200px and up";
+  }
+}

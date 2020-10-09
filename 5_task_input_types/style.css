@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: darkorange;
+  color: white;
+}
+
+td {
+  padding: 15px;
+  color: black;
+  text-align: left;
+  width: 25%;
+}
+
+table,
+th,
+td {
+  border: 1px solid gray;
+}
+
+.center {
+  text-align: center;
+}

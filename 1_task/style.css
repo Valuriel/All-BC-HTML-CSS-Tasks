@@ -1,0 +1,17 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: yellow;
+}
+
+
+
+p{
+    color: violet;
+}
+
+#my_id{color: lightcoral;}
+
+.my_class{color: green;}

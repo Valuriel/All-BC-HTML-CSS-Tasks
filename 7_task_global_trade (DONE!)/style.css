@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+p {
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+input,
+textarea {
+  padding: 8px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  border-radius: 2px;
+  border: 1px solid #333;
+}
+
+/***** Header formatting *****/
+
+header {
+  text-align: center;
+}
+
+header .logo img {
+  width: 200px;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+header nav ul li a {
+  color: #333333;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px;
+  display: block;
+  border-bottom: 4px solid transparent; /* life hack, transparent reserves the space below the underlining. No jumping anymore! */
+}
+
+header nav ul li a:hover {
+  color: #fe6000;
+  font-weight: bold;
+  border-bottom: 4px solid #fe6000;
+}
+
+/***** Hero-Banner formatting *****/
+
+#hero-banner .container {
+  padding-top: 100px;
+}
+
+#hero-banner {
+  background: url(https://source.unsplash.com/featured/?sky) no-repeat center
+    center/cover;
+  height: 75vh;
+}
+
+#hero-banner .content {
+  background-color: rgba(255, 132, 0, 0.7);
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  width: 500px;
+}
+
+#hero-banner .content h2 {
+  font-size: 32px;
+}
+
+#hero-banner .content a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #333;
+  padding: 12px 24px;
+  border-radius: 2px;
+  margin-top: 24px;
+  display: inline-block;
+}
+
+#hero-banner .content a:hover {
+  color: darkorange;
+  background-color: white;
+}
+
+/****** About Us section formatting *****/
+
+#about {
+  background-color: white;
+  height: 65vh;
+}
+
+#about .texts {
+  float: left;
+  width: 40%;
+}
+
+#about img {
+  float: right;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/***** Footer formatting *****/
+
+footer {
+  background-color: #333;
+  color: white;
+  height: 120vh;
+}
+
+footer form {
+  float: left;
+  width: 40%;
+}
+
+footer .right {
+  float: right;
+  width: 40%;
+}
+
+/****** Form formatting *****/
+
+footer form label {
+  width: 150px;
+  display: inline-block;
+}
+
+footer form .form-group {
+  margin: 16px 0;
+}
+
+footer form h3 {
+  border-top: 1px dotted grey;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+footer form input {
+  width: 56%;
+}
+
+footer form input[type="radio"],
+footer form input[type="checkbox"] {
+  margin: 0 20px;
+  width: auto;
+}
+
+
+footer form textarea {
+  margin-left: 20px;
+  display: block;
+  width: 95%;
+}
+
+footer form button {
+  background-color: orange;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  margin: 24px 24px 24px 20px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}

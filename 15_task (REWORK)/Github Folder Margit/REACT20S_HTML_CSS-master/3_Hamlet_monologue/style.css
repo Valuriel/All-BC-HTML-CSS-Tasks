@@ -1,0 +1,18 @@
+body {
+  background-color: bisque;
+  text-align: center;
+  line-height: 2;
+  font-family: "Noto Serif", serif;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  display: inline;
+}
+
+.circle {
+  background-color: pink;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}

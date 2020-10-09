@@ -1,0 +1,140 @@
+:root {
+  --background-color: cornsilk;
+  --light-color: skyblue;
+  --dark-color: #333333;
+  --highlight-color: salmon;
+  --font: sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, blue, yellow, green);
+  background-repeat: no-repeat;
+  font-family: var(--font);
+  height: 100vh;
+}
+
+.card {
+  height: 200px;
+  margin: 0 auto;
+  width: 150px;
+  background: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--dark-color);
+  transition: all 2s 0s;
+}
+
+.card:hover {
+  transform: rotate(125deg);
+  /* transform: skewY(25deg); */
+  /* transform: skewX(25deg); */
+  /* transform: scale(2, 5); */
+  /* transform: translateY(100px); */
+  /* transform: translateX(-100px); */
+  /* transform: translate(100px, 100px); */
+  /* transform: translate3d(100px, 100px, 100px); */
+  /* perspective: 200px; */
+  /* transform: perspective(200px) rotateY(45deg); */
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  background: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px var(--dark-color);
+  transition: all 2s;
+  animation-name: example; /* necessary to give the animation a name to call it later! */
+  animation-duration: 3s;
+  animation-iteration-count: 3; /* how often it performs the animation */
+  position: relative;
+}
+
+/*
+@keyframes example {
+  from {
+    background: var(--light-color);
+  }
+  to {
+    background: var(--highlight-color);
+    height: 200px;
+    width: 200px;
+    box-shadow: 10px 10px 20px #333333;
+  }
+}
+*/
+
+/* Moving Object */
+@keyframes example {
+  0% {
+    top: 0;
+    left: 0;
+    background: var(--light-color);
+  }
+  25% {
+    top: 0;
+    left: 200px;
+    background: var(--highlight-color);
+  }
+  50% {
+    top: 200px;
+    left: 200px;
+    background: var(--dark-color);
+  }
+  75% {
+    top: 200px;
+    left: 0;
+    background: var(--background-color);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 5px var(--highlight-color);
+  }
+}
+
+
+/* Menu Animation */
+
+.menu-item h1 {
+  display: inline-block;
+}
+
+.menu-item h1::before {
+  content: '';
+  height: 0;
+  width: 4px;
+  display: inherit;
+  background-color: var(--highlight-color);
+  transition: all 1s;
+}
+
+
+.menu-item:hover h1::before {
+  content: '';
+  height: 4px;
+  width: 0;
+  display: inherit;
+  background-color: var(--highlight-color);
+  transition: all 1s;
+}
+
+.menu-item h1::after {
+  content: '';
+  height: 4px;
+  width: 0;
+  display: inherit;
+  background-color: var(--highlight-color);
+  transition: all 1s;
+}
+
+.menu-item:hover h1::after {
+ width: 100%;
+}
